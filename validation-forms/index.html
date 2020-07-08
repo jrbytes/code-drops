@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation with HTML API</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
+
+  <script src="scripts.js" defer></script>
+</head>
+
+<body>
+  <form action="">
+    <h2>Entrar na lista</h2>
+
+    <div class="input">
+      <input type="text" required>
+      <label>Nome</label>
+      <span class="error"></span>
+    </div>
+
+    <div class="input">
+      <input type="email" required>
+      <label>E-mail</label>
+      <span class="error"></span>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+  <script>
+    document.querySelector('form')
+      .addEventListener('submit', event => {
+        console.log('enviar formulário')
+        event.preventDefault()
+      })
+  </script>
+</body>
+
+</html>
